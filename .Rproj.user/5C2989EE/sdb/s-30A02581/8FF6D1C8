@@ -1,0 +1,17 @@
+{
+    "contents" : "# library(shiny)\n# library(BH)\n# library(stringr)\n# library(lattice)\n# library(latticeExtra)\n# library(psych) # enfernen?\nlibrary(markdown)\n# library(foreign)\nlibrary(car)\n\n\n\n  shinyUI(fluidPage(\n    \n  # Application title\n  titlePanel(\"Transformations of variables/data\"),\n  \n  # Sidebar with controls to select the random distribution type\n  # and number of observations to generate. Note the use of the\n  # br() element to introduce extra vertical spacing\n  sidebarLayout(\n    sidebarPanel(\n      h5(textOutput(\"hits\")),\n      selectInput(\"transformation\", label = \"Transformation:\",\n                  choices = c(\"none\", \"center\", \"divided by 10\", \"mininum to 0\", \"reverse\", \"standardize\"), selected = 1),\n      selectInput(\"original.scale\", label = \"Keep original X-scale:\",\n                  choices = c(\"no\", \"yes (-50 to 170)\"), selected = 1),\n      br(), br(),\n      \n      div(\"Shiny app by\", \n          a(href=\"http://paulcbauer.eu/\",target=\"_blank\", \n            \"Paul C. Bauer\"),align=\"right\", style = \"font-size: 8pt\"),\n      \n      \n      div(\"Shiny/R code:\",\n          a(href=\"https://github.com/paulbauer/transformations_of_variables/\",\n            target=\"_blank\",\"GitHub\"),align=\"right\", style = \"font-size: 8pt\")\n\n  ),\n\n mainPanel(\n      tabsetPanel(type = \"tabs\", \n        tabPanel(\"Plot\", plotOutput(\"plot\")),\n        tabPanel(\"Data\", h4(\"Summary statistics of weight\"), verbatimTextOutput(\"summary\"), h4(\"Original data\"), verbatimTextOutput(\"originaldata\"), h4(\"Transformed data\"), verbatimTextOutput(\"transformeddata\")),\n               tabPanel(\"Instructions\", includeMarkdown(\"instruction.md\")),\n        tabPanel(\"About\", includeMarkdown(\"about.md\"))\n      \n      )\n    )\n  )\n))\n\n\n   \n\n\n\n\n\n\n\n\n\n\n      \n\n\n\n",
+    "created" : 1446901569235.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1970419232",
+    "id" : "8FF6D1C8",
+    "lastKnownWriteTime" : 1446901594,
+    "path" : "C:/Users/paul/Google Drive/Packages/transformations_of_variables/ui.R",
+    "project_path" : "ui.R",
+    "properties" : {
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "type" : "r_source"
+}
