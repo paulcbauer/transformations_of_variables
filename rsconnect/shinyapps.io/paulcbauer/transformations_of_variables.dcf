@@ -1,8 +1,8 @@
 name: transformations_of_variables
 account: paulcbauer
 server: shinyapps.io
-bundleId: 306028
+bundleId: 306053
 url: https://paulcbauer.shinyapps.io/transformations_of_variables
-when: 1446901713.52584
+when: 1446906828.71607
 asMultiple: FALSE
 asStatic: FALSE
